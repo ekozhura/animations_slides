@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.207/distr/fira_code.css">
+		<title>Animations</title>
+
+		<link rel="stylesheet" href="node_modules/reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="node_modules/reveal.js/css/theme/night.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="node_modules/reveal.js/lib/css/atom-one-light.css">
+
+
+    <style>
+			code, .reveal pre code {
+				font-family: 'Fira Code', monospace !important;
+				font-weight: 300;
+			}
+
+      .me {
+        display: flex;
+        flex-direction: columns;
+      }
+      .desc {
+        text-align: left;
+      }
+      .avatar-img {
+        width: 50%;
+        border-radius: 50%;
+      }
+    </style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-markdown="md_slides/slide0.md"  ></section>
+				<section>
+						<h3>Who I am</h3>
+						<div class="me">
+							<div class="desc">
+									<p>Frontend engineer <nobr>@ Rails Reactor</nobr></p>
+									<p><a href="https://github.com/ekozhura">github.com/ekozhura</a></p>
+									<p><a href="https://twitter.com/Brutallo">twitter.com/Brutallo</a></p>
+									<p><a href="http://kojuro.com">kojuro.com</a></p>
+									</p>
+								</div>
+								<div class="avatar">
+									<img src="assets/photo.jpeg" class="avatar-img">
+								</div>
+						</div>
+				</section>
+        <section>
+					<section data-markdown="md_slides/slide1.md"  ></section>
+					<section data-markdown="md_slides/slide1.1.md"  ></section>
+					<section>
+						<p>so the DoomGuy can do this</p>
+						<img src="assets/doomguy_moving.gif" />
+					</section>
+				</section>
+				<section data-markdown="md_slides/slide2.0.md"  ></section>
+				<section data-markdown="md_slides/slide2.1.md"  ></section>
+				<section data-markdown="md_slides/slide2.2.md"  ></section>
+        <section data-markdown="md_slides/slide2.md"  ></section>
+        <section data-markdown="md_slides/slide3.md"  ></section>
+        <section data-markdown="md_slides/slide4.md"  ></section>
+        <section data-markdown="md_slides/slide5.md"  ></section>
+        <section data-markdown="md_slides/slide6.md"  ></section>
+        <section data-markdown="md_slides/slide7.md"  ></section>
+        <section data-markdown="md_slides/slide8.md"  ></section>
+        <section data-markdown="md_slides/slide9.md"  ></section>
+        <section data-markdown="md_slides/slide10.md"  ></section>
+				<section>
+					<section data-markdown="md_slides/slide11.md"  ></section>
+					<section data-markdown="md_slides/slide11.2.md"  ></section>
+				</section>
+				<section data-markdown="md_slides/slide12.md"  ></section>
+				<section data-markdown="md_slides/slide13.md"  ></section>
+			</div>
+		</div>
+		<script src="node_modules/reveal.js/js/reveal.js"></script>
+
+		<script>
+			Reveal.initialize({
+				history: true,
+				dependencies: [
+					{ src: 'node_modules/reveal.js/plugin/markdown/marked.js' },
+					{ src: 'node_modules/reveal.js/plugin/markdown/markdown.js' },
+					{ src: 'node_modules/reveal.js/plugin/notes/notes.js', async: true },
+					{ src: 'node_modules/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
