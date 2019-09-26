@@ -1,10 +1,15 @@
-<section>
-
 Use `Animation` in a different context
 
 ```ts
 type EmojiAction = SingleChar | ComposedChar;
-...
+
+function runEmoji(tr: EmojiAction) {
+  switch(tr.type) {
+    case "singleChar": return tr.char;
+    case "composedChar": return tr.charA.char + tr.charB.char;
+  }
+}
+
 let emojiRuntime = function (action: Animation<EmojiAction>) {
   function loop(t: Time) {
     location.hash = runEmoji(action.fn(t));
@@ -14,21 +19,3 @@ let emojiRuntime = function (action: Animation<EmojiAction>) {
 };
 ```
 the idea is taken from [here](https://matthewrayfield.com/articles/animating-urls-with-javascript-and-emojis/)
-</section>
-<section>
-<img src="assets/emoji.gif" />
-
-```ts
-const moonEmoji = timeTrans<SingleChar>(
-  slowDown(5),
-  drawEmojiA(moon.map(setChar).reverse())
-);
-const clockEmoji = drawEmojiA(
-  clock.map(setChar).reverse()
-),
-
-emojiRuntime(
-  composeCharsA(moonEmoji, clockEmoji)
-);
-```
-</section>
